@@ -2,15 +2,10 @@
     background-color: black;
     color:white;
     height: 100vh;
-    text-align: center;
     display:flex;
+    gap: 7rem;
     flex-direction: row;
     width: 100%;
-      @media (min-width: 600px) {
-        .column {
-          width: 50%;
-        }
-    }    
 }
 h1{
     font-family:var(--elewa-group-website-dmsans-regular);
@@ -34,21 +29,46 @@ span{
     float: left; 
     font-size: 30px; 
     margin-top: 12vh;
-    margin-left:10%;
+    margin-left:9%;
+    gap: 2rem;
+    @media screen and (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        justify-content: center;
+        gap: 2rem;
+        
+    }
 }
 .contact-right{
     width: 70%; 
     float: right;
     font-size: 30px;
     margin-top: 12vh;
+    @media screen and (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        justify-content: center;
+        gap: 2rem;
+        
+    }
+}
+.contactleft-down{
+    @media screen and (min-width:488px){
+        height: 22%;
+    }
+    @media screen and (max-width:768px) {
+        height: 66%;
+}
 }
 .icon{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0px;
     width: 30%;
-    padding-top: 70%;
     margin-left: 4%;
+    padding-top: 66%;
+    
 }
 #name{
     background-color: black;
@@ -57,10 +77,9 @@ span{
     font-size: 30px;
     border: none;
     border-bottom: 2px solid #ccc;
-    width: 70%;
+    width: 80%;
     padding: 15px;
-    
-
+    gap: 2rem;    
 }
 #companyName{
     background-color: black;
@@ -69,7 +88,7 @@ span{
     font-size: 30px;
     border: none;
     border-bottom: 2px solid #ccc;
-    width: 70%;
+    width: 80%;    
     padding: 15px;    
 }
 #email{
@@ -79,7 +98,7 @@ span{
     font-size: 30px;
     border: none;
     border-bottom: 2px solid #ccc;
-    width: 70%;
+    width: 80%;
     padding: 15px;
 }
 #select-option{
@@ -89,8 +108,8 @@ span{
     font-size: 30px;
     border: none;
     border-bottom: 2px solid #ccc;
-    width: 70%;
-    padding: 15px;    
+    width: 80%;
+    padding: 15px; 
 }
 #message{
     background-color: black;
@@ -99,7 +118,7 @@ span{
     font-size: 30px;
     border: none;
     border-bottom: 2px solid #ccc;
-    width: 70%; 
+    width: 80%; 
     padding: 15px;   
 }
 .form-wrapper1{
@@ -121,13 +140,34 @@ span{
 .contactform-footer{
     display: flex;
     flex-direction: row;
-    padding-top: 12%;
+    gap: 2rem;
+    padding-top: 9%;
 }
 .contactform-footer-left{
     float: left;
-    width: 70%;
+    width: 60%;
+    font-size: 22px;
+}
+.spanned{
+    font-size: 28px;
 }
 .contactform-footer-right{
     float: right;
     width: 30%;
+}
+
+@media screen and (max-width:768px) {
+    .contact{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+}
+@media screen and (max-device-height: 281px) and (min-width:488px)and (max-device-width: 1024px) and (max-device-width: 1600px){
+    .contact{
+        padding: 4%;
+        height: 100vh;
+        width: 100%;
+        columns: 50%;
+    }
 }
